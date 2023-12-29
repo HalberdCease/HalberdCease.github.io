@@ -11,7 +11,7 @@
   	
 
     
-  	  归档 |
+  		搜索 |
   	
 
   	Halberd Cease's Blog
@@ -132,70 +132,29 @@
         <div class="vertical post">
           
           <div class="header">
-  <h1 class="title">
-    
-      归档
-    
-  </h1>
-  <div class="meta">
-    
-      以下文章写于这个日期。
-    
-    </div>
+  	<h1 class="title">
+  	    搜索
+  	</h1>
+  	<div class="meta">
+  	    输入关键词搜索...
+  	</div>
 </div>
-<div class="post-text archives">
-  <ol class="timeline">
-  
-  
-    <li>
-      
-      
-        <t><a href="/archives/2023/index.html">Year 2023</a></t>
-        
-      
-      
-        
-        <t><a href="/archives/2023/12/index.html">Month 12</a></t>
-        
-      
-      
-        
-        <b class="date">2023-12-24</b>
-      
-      <p><a class="title" href="/2023/12/24/poly/">
-        
-          多项式学习笔记（更新至NTT）
-        
-      </a></p>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <p><a class="title" href="/2023/12/24/fight-to-whk/">
-        
-          向 whk 宣战诏书
-        
-      </a></p>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <p><a class="title" href="/2023/12/24/hello-world/">
-        
-          施工通知 Dec.29th 2023
-        
-      </a></p>
-    </li>
-  
-  </ol>
-</div>
+<div class="post-text">
+	<script type="text/javascript">
+      var search_path = "search.xml";
+      if (search_path == "") search_path = "/search.xml";
+      var path = search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+  <p>稍等片刻才能进行站内搜索。</p>
+	<form class="d-flex">
+    	<input id="local-search-input" class="form-control me-2 pe-4" type="search" placeholder="输入关键词搜索..." aria-label="Search">
+      <button type="button" data-bs-toggle="tooltip" title="必应站外搜索" class="btn btn-secondary" onclick="window.open('https://cn.bing.com/search?q='+document.getElementById('local-search-input').value+'+site%3Ahttps://HalberdCease.github.io');"><i class="fa fa-search"></i></button>
+	</form>
 
+	<br />
+	<div id="local-search-result" style="word-break: break-all;"></div>
+</div>
           <div class="avatar-container" style="padding: 50px;">
             <img src="/img/new-avatar.jpg" class="avatar revolve" style="height: 12%; width: 12%;"/>
             <div style="text-align: center; margin-top: 3%;">By Halberd Cease.</div>

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://halberdcease.github.io/2023/12/24/hello-world/</loc>
+    <loc>https://halberdcease.github.io/search/index.html</loc>
     
     <lastmod>2023-12-29</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://halberdcease.github.io/about/index.html</loc>
+    <loc>https://halberdcease.github.io/2023/12/24/hello-world/</loc>
     
     <lastmod>2023-12-29</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://halberdcease.github.io/2023/12/24/poly/</loc>
+    <loc>https://halberdcease.github.io/about/index.html</loc>
     
     <lastmod>2023-12-29</lastmod>
     
@@ -29,7 +29,16 @@
   </url>
   
   <url>
-    <loc>http://halberdcease.github.io/2023/12/24/fight-to-whk/</loc>
+    <loc>https://halberdcease.github.io/2023/12/24/poly/</loc>
+    
+    <lastmod>2023-12-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://halberdcease.github.io/2023/12/24/fight-to-whk/</loc>
     
     <lastmod>2023-12-24</lastmod>
     
@@ -38,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://halberdcease.github.io/link/index.html</loc>
+    <loc>https://halberdcease.github.io/link/index.html</loc>
     
     <lastmod>2023-12-24</lastmod>
     
@@ -48,7 +57,7 @@
   
 
   <url>
-    <loc>http://halberdcease.github.io/</loc>
+    <loc>https://halberdcease.github.io/</loc>
     <lastmod>2023-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>

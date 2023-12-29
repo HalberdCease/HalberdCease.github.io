@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://halberdcease.github.io/2023/12/24/hello-world/</loc>
+    
+    <lastmod>2023-12-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://halberdcease.github.io/about/index.html</loc>
     
     <lastmod>2023-12-29</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>http://halberdcease.github.io/2023/12/24/fight-to-whk/</loc>
-    
-    <lastmod>2023-12-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://halberdcease.github.io/2023/12/24/hello-world/</loc>
     
     <lastmod>2023-12-24</lastmod>
     

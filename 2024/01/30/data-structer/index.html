@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="msvalidate.01" content="A7B4DB5A7BF5E5C6E52E34BB024D6319" />
+  <meta name="description" content="">
+  <meta http-equiv='content-language' content='zh-cn'>
+  <title>
+  	
+
+    
+  		数据结构学习笔记 |
+  	
+
+  	Halberd Cease's Blog
+  </title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.staticfile.org/sketch.js/1.0/sketch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+  <script src="/js/chaffle.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/initial.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.6/katex.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/vs2015.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Halberd Cease's Blog" type="application/atom+xml">
+</head>
+  <body style="background-image: url(/img/new-bgp.jpg);">
+    <div id="YurLoading" class="YurLoading">
+      <div class="inner">
+        <div class="line-wrap"><div class="line"></div></div>
+        <div class="line-wrap"><div class="line"></div></div>
+        <div class="line-wrap"><div class="line"></div></div>
+        <div class="line-wrap"><div class="line"></div></div>
+        <div class="line-wrap"><div class="line"></div></div>
+      </div>
+    </div>
+    <div class="topbar">
+	<a onclick="topbarToggle()" class="topbar-menu" style="cursor: pointer;">
+		<i class="fa fa-bars"></i>
+	</a>
+	<a href="/" class="topbar-title">
+		<i class="fa fa-home"></i> Halberd Cease's Blog
+	</a>
+	<a target="_blank" rel="noopener" href="https://github.com/HalberdCease" class="topbar-title">
+		<i class="fa fa-github"></i>
+	</a>
+</div>
+    <div id="article-container">
+      <div class="sidebar">
+  <div class="avatar-container">
+  	<img src="/img/new-avatar.jpg" class="avatar revolve" />
+  </div>
+
+  <div class="sidebar-author">
+    Halberd Cease<br />
+    <span class="mini-text">芙宁娜小姐的狗</span>
+  </div>
+
+  <div class="sidebar-list-container">
+    <div style="height: 10px;"></div>
+  	
+      
+      
+  	  <a class="list-group-item" href="/"><div><i class="fa fa-home fa-fw"></i>&nbsp; 首页</div>
+      </a>
+    
+      
+      
+  	  <a class="list-group-item" href="/archives/"><div><i class="fa fa-tasks fa-fw"></i>&nbsp; 归档</div>
+      </a>
+    
+      
+      
+  	  <a class="list-group-item" href="/tags/"><div><i class="fa fa-tags fa-fw"></i>&nbsp; 标签</div>
+      </a>
+    
+      
+      
+  	  <a class="list-group-item" href="/about/"><div><i class="fa fa-user-o fa-fw"></i>&nbsp; 关于</div>
+      </a>
+    
+      
+      
+  	  <a class="list-group-item" href="/link/"><div><i class="fa fa-link fa-fw"></i>&nbsp; 链接</div>
+      </a>
+    
+    <div style="height: 200px;"></div>
+  </div>
+
+  <div class="sidebar-footer">
+  	<div class="item" id="back2Top" data-bs-toggle="tooltip" title="顶部">
+  		<i class="fa fa-arrow-circle-up"></i>
+  	</div>
+    <div class="item" id="back2Down" data-bs-toggle="tooltip" title="底部">
+      <i class="fa fa-arrow-circle-down"></i>
+    </div>
+  	<div class="item" data-bs-toggle="tooltip" title="RSS">
+  		<a href="/atom.xml"><i class="fa fa-feed"></i></a>
+  	</div>
+  	<div class="item"  data-bs-toggle="tooltip" title="搜索">
+  		<a href="/search/"><i class="fa fa-search"></i></a>
+  	</div>
+  </div>
+</div>
+      <div class="article">
+        <div class="vertical fake-sidebar"></div>
+        <div class="vertical post">
+          
+          <div class="header">
+  <h1 class="title">
+    
+      数据结构学习笔记
+    
+  </h1>
+  <div class="meta">
+    <span><i class="fa fa-user-o"></i>
+      
+        Halberd Cease
+       
+    </span>
+    <span><i class="fa fa-clock-o"></i> 2024-01-30, 19:51:17</span>
+    <span><i class="fa fa-font"></i> 1k</span>
+    
+    <span class="hideBars" onclick="hideBars()"><i class="fa fa-eye-slash"></i>
+      隐藏左右两栏
+    </span>
+    <span class="showBars" onclick="showBars()"><i class="fa fa-eye"></i>
+      展示左右两栏
+    </span>
+  </div>
+</div>
+<div class="breadcrumb">
+  <div class="url">
+    <a href="/"><i class="fa fa-home"></i> 首页</a> /
+    
+      数据结构学习笔记
+    
+  </div>
+  <div class="share">
+    分享到 <a target="_blank" rel="noopener" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://halberdcease.github.io/2024/01/30/data-structer/&title=数据结构学习笔记&site=https://HalberdCease.github.io"><i class="fa fa-qq"></i></a>
+  </div>
+</div>
+
+<div class="post-text">
+  <p>学了根号数据结构之后，我的心灵得到了极大的净化，赌博都更会了！</p>
+<h2 id="p2572-scoi2010-序列操作"><a class="markdownIt-Anchor" href="#p2572-scoi2010-序列操作"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2572">P2572 [SCOI2010] 序列操作</a></h2>
+<p>码长：4.10KB。</p>
+<p><s>不是分块</s></p>
+<p>老牌线段树题目，非常史山。</p>
+<p>有区间赋值 0 和 1、区间取反、区间 1 总数、区间连续 1 最大值，线段树维护以下信息：0、1 总数，0、1 区间连续最大值，0、1 左端起最大值和右端起最大值。</p>
+<p>同时需要维护区间赋值和区间取反的 tag。</p>
+<p>考虑合并以上信息：</p>
+<ul>
+<li>区间 0、1 总数直接加即可；</li>
+<li>区间左端连续 0 最大值，如果左儿子区间全部是 0，那么就是左边所有点加上右儿子区间左端连续 0 的个数，否则就是左区间左端连续 0 的个数；</li>
+<li>区间右端连续 0 最大值，连续 1 最大值同理；</li>
+<li>区间 0、1 最大值就是原来左右两区间的最大值，加上中间合并的最大值（如 0 的最大值，就是左区间的、右区间的和左区间右连续加上右区间左连续的最大值）。</li>
+</ul>
+<p>打标记，如果是区间推平，直接覆盖所有标记，然后改信息；</p>
+<p>如果是区间取反，取反标记异或 1，交换上面所有信息（0、1 互相交换）。</p>
+<p>注意细节，然后就没有了。</p>
+<h2 id="p8969-幻梦-dream-with-dynamic"><a class="markdownIt-Anchor" href="#p8969-幻梦-dream-with-dynamic"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8969">P8969 幻梦 | Dream with Dynamic</a></h2>
+<p>码长：2.92KB。</p>
+<p>好听的名字，好深意的题目背景。</p>
+<p>看到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>popcount()</mtext></mrow><annotation encoding="application/x-tex">\text{popcount()}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">popcount()</span></span></span></span></span> 想到其值域为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">\log V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>，考虑在块内维护。</p>
+<p>对于整块的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>popcount</mtext></mrow><annotation encoding="application/x-tex">\text{popcount}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">popcount</span></span></span></span></span>，当块内全部都被 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>popcount</mtext></mrow><annotation encoding="application/x-tex">\text{popcount}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">popcount</span></span></span></span></span> 后，其值只有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>V</mi><mo>≤</mo><mn>64</mn></mrow><annotation encoding="application/x-tex">\log V\le 64</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">4</span></span></span></span> 种可能，因此可以建立每一个位置对其值的映射，后面进行整块修改的时候，只用修改映射的值，单次复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log V)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose">)</span></span></span></span>。</p>
+<p>整块的加法直接打 tag 就好了。</p>
+<p>对于散块的操作，因为一次操作最多打出 2 个散块，直接暴力即可，但是在整块中维护的性质会被破坏掉，所以直接把映射拆掉，转化成朴素的权值记录，单次 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(B)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span>。下一次再次转化成映射的时候，也只会有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(B)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span> 的复杂度，所以可以直接拆。</p>
+<p>注意本题的块长，直接取 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">n</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span> 是不行的，如果只有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>popcount()</mtext></mrow><annotation encoding="application/x-tex">\text{popcount()}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">popcount()</span></span></span></span></span>，会爆炸，需要取 1145 为佳。</p>
+<h2 id="p4137-rmq-problem-mex"><a class="markdownIt-Anchor" href="#p4137-rmq-problem-mex"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4137">P4137 Rmq Problem / mex</a></h2>
+<p>码长：2.34KB <s>（咋越来越水了……</s></p>
+<p>不是分块，但也是一款正宗的根号算法。</p>
+<p>询问离线，加上删数的递推是显然的，想到莫队算法，因为本题只有删数转移指针 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 好做，所以考虑回滚莫队，然后这题就没有了。</p>
+<p>说一下回滚莫队的一些细节：询问按左端点所在块升序为第一关键字，按右端点降序为第二关键字进行排序。对于每一个块的询问，左指针都从块的最左边移向左端点，然后再“回滚”回去，也就是说，我们只是把指针和状态复原，而答案并不是在复原的过程中递推出来的，而是开始记录的。我们先移动右指针从右边往左移动，直到这个询问的右端点，这时记录一下当前区间的答案，然后把左指针往右移动到左端点，这一部分都和普通莫队一样，记录完这次询问的答案后，我们将左端点原路返回撤销标记，答案直接赋值为之前记录的答案，然后开始下一次询问。如果遇到新的块直接重构就好了。</p>
+<p>时间复杂度的话，如果块长为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span>，令 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n,m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">m</span></span></span></span> 同阶，左指针最多跳 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">nb</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">b</span></span></span></span> 次，右指针最多跳 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msup><mi>n</mi><mn>2</mn></msup><mi>b</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{n^2}{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.36292em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01792em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> 次，综合下来也许 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">b=\sqrt{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">n</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span> 有最优复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><msqrt><mi>n</mi></msqrt><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\sqrt{n})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.05028em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">n</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 了。</p>
+
+  
+  <br /><hr /><br />
+  <blockquote>
+    <br />
+    本文作者：Halberd Cease
+    <br /><br />
+    本文链接：https://halberdcease.github.io/2024/01/30/data-structer/
+    <br /><br />
+    版权声明：除非另有说明，本网站上的内容均采用<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可，请您在转载时注明来源及博客链接。
+    <br /><br />
+  </blockquote>
+  <br />
+  <div class="end-post-meta">
+    
+		  <span><a href="/tags/学习笔记/index.html"><i class="fa fa-tag"></i> 学习笔记</a></span>
+	 
+  </div>
+  <div class="end-post-meta">
+    <span><i class="fa fa-refresh"></i> 最后更新：2024-01-31, 19:50:06</span>
+  </div>
+
+
+</div>
+
+  <div class="prevnext">
+    
+      <a class="prev" href="/2024/02/01/Ktx-65/">上一页</a>
+    
+      <a class="next" href="/2024/01/28/chaolixue/">下一页</a>
+    
+  </div>
+
+<div class="comments">
+
+  
+
+    Halberd Cease 并未使用评论功能哦！
+
+  
+
+</div>
+          <div class="avatar-container" style="padding: 50px;">
+            <img src="/img/new-avatar.jpg" class="avatar revolve" style="height: 12%; width: 12%;"/>
+            <div style="text-align: center; margin-top: 3%;">By Halberd Cease.</div>
+          </div>
+        </div>
+        <div class="vertical toolbar">
+  <div class="tab-page">
+    <div class="tabTitle tb-tabTitle">
+      <ul>
+        <li class="current"><i class="fa fa-random"></i></li>
+        <li><i class="fa fa-refresh"></i></li>
+        
+        <li><i class="fa fa-circle-o-notch"></i></li>
+        
+     </ul>
+    </div>
+    <div class="tabContent tb-tabContent">
+      <div>
+
+<!--  1-tab  -->
+<div class="title">随机文章<span class="sidetitle">回味旧文</span></div>
+<div class="item no-lrpadding">
+  <a class="post-link" href="/2024/01/24/playlist/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">歌单征集</div></div></a><a class="post-link" href="/2024/01/23/update/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">更新日志</div></div></a><a class="post-link" href="/2024/02/20/gpt-yan-gpt-yu/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">GPT 说话大赏</div></div></a><a class="post-link" href="/2024/02/19/Feb-19-problems/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">2.19 做题记录</div></div></a><a class="post-link" href="/2024/02/06/red-blue-eyes/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">红蓝眼睛岛民问题思考</div></div></a><a class="post-link" href="/2024/02/05/Feb-5th/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">2月5日鲜花</div></div></a><a class="post-link" href="/2024/02/02/wwb-ak-ioi/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">魏文博中举</div></div></a>
+</div>
+<!--  END 1-tab  -->
+
+      </div>
+      <div class="hide">
+<!--  2-tab  -->
+
+<div class="title">最近更新<span class="sidetitle">旧文更新</span></div>
+<div class="item no-lrpadding">
+  <a class="post-link" href="/2024/02/20/gpt-yan-gpt-yu/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">GPT 说话大赏</div></div></a><a class="post-link" href="/2024/02/02/wwb-ak-ioi/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">魏文博中举</div></div></a><a class="post-link" href="/2024/02/19/Feb-19-problems/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">2.19 做题记录</div></div></a><a class="post-link" href="/2024/02/06/red-blue-eyes/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">红蓝眼睛岛民问题思考</div></div></a><a class="post-link" href="/2024/02/05/Feb-5th/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">2月5日鲜花</div></div></a><a class="post-link" href="/2024/02/02/fuck-zhao-ying/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">【转载】怀念赵颖老师</div></div></a><a class="post-link" href="/2024/02/01/Ktx-65/"><div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">【模拟】河童重工的计算机</div></div></a>
+</div>
+<!--  END 2-tab  -->
+
+      </div>
+      <div class="hide">
+<!--  3-tab  -->
+
+
+  <div class="title">其他物件<a
+    data-bs-toggle="tooltip" href="
+    javascript: document.body.contentEditable='true';
+    document.designMode='on';void(0);"
+    title="彩蛋：点击我，可以编辑本页面！"
+    target="_self" class="sidetitle">杂物收纳</a></div>
+
+  <div style="height: 10px;"></div>
+
+  <div class="item">
+    <tag style="display: inline-block;">Hitokoto</tag><br><br>
+    <div id="hitokoto">Halberd Cease 说，除了她以外的人都很强！嘤嘤嘤~~</div>
+    <script>
+      fetch('https://v1.hitokoto.cn')
+        .then(function (res){return res.json();})
+        .then(function (data) {
+          $("#hitokoto").html(data.hitokoto+"<br><br><div style='text-align: right;'>——"+data.from+"</div>");
+        })
+        .catch(function (err) {console.error(err);})
+    </script>
+  </div>
+
+  <div class="item">
+    <div id="timeprogress"></div>
+    <script>
+      var myDate = new Date();
+      var hours = myDate.getHours();
+      var minutes = myDate.getMinutes();
+      minutes = hours * 60 + minutes;
+      var pro = minutes / 14.4;
+      var innerhtml="\
+        <div class='progress' style='height: 20px'>\
+          <div data-bs-toggle='tooltip'\
+               class='progress-bar'\
+               title='时间已过去了 "+pro.toFixed(2)+"%'\
+               style='width: "+pro+"%;\
+               background: #4caf50; color: #fff;'>"
+               +pro.toFixed(0)+"%\
+          </div>\
+        </div>";
+      document.getElementById("timeprogress").innerHTML = innerhtml;
+    </script>
+  </div>
+
+<!--  END 3-tab  -->
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="item">
+    <div class="title">博客信息</div>
+    <div class="list-group">
+      <div class="list-group-item"><div><i class="fa fa-file-text-o fa-fw"></i>
+        文章数目</div><div class="badge">24</div>
+      </div>
+      <div class="list-group-item"><div><i class="fa fa-refresh fa-fw"></i>
+        最近更新</div><div class="badge">01-31</div>
+      </div>
+      <div class="list-group-item"><div><i class="fa fa-font fa-fw"></i>
+        本站字数</div><div class="badge">60.7k</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 标签可能太多，影响目录 -->
+    <div class="post-toc">
+      <div class="title">文章目录</div>
+      <div class="post-toc-inner"></div>
+    </div>
+    <script>
+      tocbot.init({
+        tocSelector: '.post-toc-inner',
+        contentSelector: '.post-text',
+        headingSelector: 'h1, h2, h3, h4, h5, h6',
+        hasInnerContainers: true,
+      });
+    </script>
+   
+
+  <script>
+    $(function(){
+      var ali = $('.tb-tabTitle>ul>li');
+      var aDiv = $('.tb-tabContent>div');
+      var timeId = null;
+      ali.click(function(){
+        var _this = $(this);
+        timeId = setTimeout(function(){
+          _this.addClass('current').siblings().removeClass('current');
+          var index = _this.index();
+          aDiv.eq(index).show().siblings().hide();
+        });
+      });
+  });
+  </script>
+</div> 
+      </div>
+      <div class="footer">
+  <p class="text-left">©2019-2023 <a target="_blank" rel="noopener" href="https://github.com/yz-hs">Yurchiu</a>. All rights reserved.</p>
+  <p class="text-right">Theme <a target="_blank" rel="noopener" href="https://github.com/yz-hs/cutie">Cutie</a>, by Yurchiu.</p>
+</div>
+
+
+
+
+    <script>if(!readData("special")) $("html").addClass("none");</script>
+
+
+<script>
+    if(!readData("color"))
+        $("html").addClass("color-white");
+
+    if(!true)
+        $(".toolbar").hide();
+
+    if(readData("color")==4 || "white"=="night"&&!readData("color")){
+        $("body").css("opacity","0.85");
+        $("body").css("background-image","url(/img/night-bgp.jpg)");
+    }
+
+    $('img').attr("onerror","this.src='/img/error.jpg';this.onerror=null");
+
+    initial();
+</script>
+    </div>
+    <!-- It is not contained by Pjax. -->
+
+    <meting-js class="meting-js appear" fixed="ture" server="netease" type="playlist" id="7285872558"></meting-js>
+
+
+<script>
+    consolePrint();
+    HideIt();
+</script>
+
+<link rel="stylesheet" href="/custom/custom.css">
+<script src="/custom/custom.js"></script>
+
+
+  </body>
+</html>

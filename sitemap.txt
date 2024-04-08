@@ -1,3 +1,7 @@
+https://halberdcease.github.io/2024/02/02/fuck-zhao-ying/
+https://halberdcease.github.io/2024/04/08/4-8-flower/
+https://halberdcease.github.io/2024/03/13/prefix-sum/
+https://halberdcease.github.io/2024/02/01/Ktx-65/
 https://halberdcease.github.io/picture/index.html
 https://halberdcease.github.io/To-My-Dear/index.html
 https://halberdcease.github.io/tags/index.html
@@ -7,8 +11,6 @@ https://halberdcease.github.io/2024/02/19/Feb-19-problems/
 https://halberdcease.github.io/2024/02/06/red-blue-eyes/
 https://halberdcease.github.io/2024/02/05/Feb-5th/
 https://halberdcease.github.io/about/index.html
-https://halberdcease.github.io/2024/02/02/fuck-zhao-ying/
-https://halberdcease.github.io/2024/02/01/Ktx-65/
 https://halberdcease.github.io/link/index.html
 https://halberdcease.github.io/2024/01/30/data-structer/
 https://halberdcease.github.io/2024/01/26/computation-geometry/
@@ -36,4 +38,5 @@ https://halberdcease.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
 https://halberdcease.github.io/tags/%E6%9D%82%E8%B0%88/
 https://halberdcease.github.io/tags/%E6%90%9E%E5%B1%81/
 https://halberdcease.github.io/tags/%E7%B3%BB%E7%BB%9F/
+https://halberdcease.github.io/tags/%E5%AD%A6%E6%9C%AF/
 https://halberdcease.github.io/tags/%E6%80%9D%E8%80%83/

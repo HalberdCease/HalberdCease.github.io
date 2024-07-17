@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2024/03/13/prefix-sum/</loc>
+    
+    <lastmod>2024-07-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2023/11/24/poly/</loc>
+    
+    <lastmod>2024-07-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2024/02/06/red-blue-eyes/</loc>
+    
+    <lastmod>2024-07-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/index.html</loc>
     
     <lastmod>2024-07-17</lastmod>
     
@@ -28,15 +55,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>http://example.com/2024/07/15/hello-world/</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>http://example.com/</loc>
@@ -47,5 +65,19 @@
 
   
 
+  
+  <url>
+    <loc>http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>

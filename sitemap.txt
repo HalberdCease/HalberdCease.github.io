@@ -1,6 +1,7 @@
+http://example.com/2024/07/19/operation-chunking/
 http://example.com/2024/03/13/prefix-sum/
-http://example.com/2023/11/24/poly/
 http://example.com/2024/02/06/red-blue-eyes/
+http://example.com/2023/11/24/poly/
 http://example.com/categories/index.html
 http://example.com/about/index.html
 http://example.com/links/index.html

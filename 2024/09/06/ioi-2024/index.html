@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Halberd Cease 的博客">
+    <meta name="description" content="Halberd Cease 的博客">
+    <meta name="author" content="Halberd Cease">
+    
+    <title>
+        
+            IOI 2024 |
+        
+        Halberd Cease&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/new-avatar.jpg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#66ccff","title":"Halberd Cease's Blog","author":"Halberd Cease","avatar":"/images/new-avatar.jpg","logo":"/images/new-avatar.jpg","favicon":"/images/new-avatar.jpg"},"menu":{"home":"/","archives":"/archives","categories":"/categories","links":"/links","about":"/about"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"即得易见平凡，仿照上例显然。留作习题答案略，读者自证不难。","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/HalberdCease","weixin":null,"qq":null,"weibo":null,"zhihu":"https://www.zhihu.com/people/halberd-cease","twitter":null,"x":"https://x.com/Halberd_Cease","facebook":null,"email":"halberdcease@gmail.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"created","post_datetime_format":"YYYY年MM月DD日 HH:mm"},"post":{"author_badge":{"enable":false,"level_badge":false,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":true,"min2read":false},"datetime_format":"YYYY 年 MM 月 DD 日 HH:mm","copyright_info":true,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2023,"word_count":false,"site_deploy":{"enable":false,"provider":"cloudflare","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"mathjax":{"enable":true,"per_page":true},"root":"","source_data":{"links":[{"title":"朋友"},{"name":"Lim Watt","link":"https://limit-bed.com/","description":"Sleeping... (~﹏~).zZ","avatar":"https://bu.dusays.com/2024/06/04/665e5701e429a.png"}]},"version":"4.2.0"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/new-avatar.jpg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Halberd Cease&#39;s Blog 
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                归档
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/categories">
+                                
+                                分类
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/links">
+                                
+                                友链
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/about">
+                                
+                                关于
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            归档
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
+                            
+                            分类
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/links">
+                            
+                            友链
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
+                            
+                            关于
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        IOI 2024
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/new-avatar.jpg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Halberd Cease</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024 年 09 月 06 日 15:13</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Fri Sep 06 2024 15:13:35 GMT+0800">2024 年 09 月 06 日 15:13</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E9%97%B2%E8%AF%9D/">闲话</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h2 id="中国队的表现"><a class="markdownIt-Anchor" href="#中国队的表现"></a> 中国队的表现</h2>
+<p>IOI 2024 总共两天的比赛日已经在昨天（2024 年 9 月 5 日）落下帷幕。</p>
+<p>首先恭喜中国队周康阳以 600.00/600 的满分成绩获得金牌 rank1，强势拉开第二名 123.78 分。</p>
+<p>美国队（USA）以团体总分 1693.38 的成绩获得团体总分第一名，IOI_1<sup>1</sup> 队和波兰队分别获得第二和第三名，中国队获得团体总分第 7 名。</p>
+<p>在本次 IOI 中，中国队出现了一些特殊事故，导致一名选手成绩被取消，两名选手成绩受影响。因此中国队获得了近 20 年来在 IOI 中的最不理想的成绩。</p>
+<p><img lazyload="" alt="" data-src="https://cdn.luogu.com.cn/upload/image_hosting/crbpgbhx.png"></p>
+<p><em>图：中国队在 2020 年至 2024 年参加 IOI 的成绩。图源：<a class="link" target="_blank" rel="noopener" href="https://stats.ioinformatics.org/results/CHN">China: Results (ioinformatics.org)<i class="fas fa-external-link-alt"></i></a></em></p>
+<p>若参考原始分数，中国队今年仍获得 4 块金牌，团体总分 1986.63（超过第一名 293.25 分），且包揽前二。</p>
+<p><img lazyload="" alt="" data-src="https://cdn.luogu.com.cn/upload/image_hosting/iis0glk9.png"></p>
+<p><em>图：主办方提供的原始得分榜。图源：<a class="link" target="_blank" rel="noopener" href="https://ranking.ioi2024.eg/">Ranking (ioi2024.eg)<i class="fas fa-external-link-alt"></i></a></em></p>
+<h2 id="携智能手机被判失格"><a class="markdownIt-Anchor" href="#携智能手机被判失格"></a> 携智能手机被判失格</h2>
+<p>关于本节，整理了部分第三方的信息，因为目前没有可靠消息来源，所以仅供参考。</p>
+<p>关于有关主题，还请大家相信当事人的言论，相信第一手资料，不要被网络营销号和自媒体误导。</p>
+<p>特别的，知乎上该问题已经成为热门问题（截至撰写本文时已有 2 小时 40 万访问量的峰值访问速率），回答质量参差不齐，不建议作为参考依据，除非保证答主或者来源可信。</p>
+<p>本节信息来源及参考：</p>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.zhihu.com/question/666315409/answer/3617612545">如何评价第 36 届国际信息学奥林匹克竞赛（IOI2024）三名中国选手携带手机进考场被处罚？ - 知乎 (zhihu.com)<i class="fas fa-external-link-alt"></i></a>；</p>
+<p><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/blog/entry/133606?#comment-1194991">IOI 2024 - Codeforces<i class="fas fa-external-link-alt"></i></a> 中的相关讨论内容；</p>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.ioi2024.eg/contest-rules">Contest Rules | IOI 2024 Egypt<i class="fas fa-external-link-alt"></i></a>；</p>
+<p><a class="link" target="_blank" rel="noopener" href="https://stats.ioinformatics.org/olympiads/2024">IOI 2024 (ioinformatics.org)<i class="fas fa-external-link-alt"></i></a>。</p>
+<hr>
+<h3 id="事情经过"><a class="markdownIt-Anchor" href="#事情经过"></a> 事情经过</h3>
+<p>在 IOI 2024 第二试中，队员 X 在裤子口袋中携带了一台开机的手机。在 X 上厕所时，志愿者发现了其口袋中的手机，并将此事报告给了 IC（组委会）进行处理。</p>
+<p>在 IC 得知此事后，IC 与志愿者检查了选手的手机。由于手机处于开机状态，IC 要求选手 X 解锁手机进行检查。在检查完成后，IC 没收了手机，并允许选手正常继续参赛。</p>
+<p>在比赛结束后，中国队的领队被 IC 告知了相关情况，并因此检查了中国队的其他三名选手。最终，中国队的四名选手均携带了背包进入考场，且背包直接置于其比赛座位上。且另外两名队员 Y 与 Z 的背包中也包含一台电源关闭的手机。IC 解释到，根据 IOI Contest Rules，任何尝试携带具有计算或通信功能的电子设备均属于作弊行为，因此会进行内部讨论进行处理。</p>
+<blockquote>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.ioi2024.eg/contest-rules">IOI Contest Rules<i class="fas fa-external-link-alt"></i></a> 有关部分：</p>
+<p><strong>the following items are strictly prohibited on the competitions:</strong></p>
+<ul>
+<li><strong>any computing equipment (e.g. calculators, laptops, tablets),</strong></li>
+<li><strong>any keyboards or mice, with wireless communication or programmable functions whose configuration is retained when unplugged,</strong></li>
+<li><strong>any books, manuals, written or printed materials,</strong></li>
+<li><strong>any data storage medium (e.g., CD-ROMs, USB drives, flash cards, micro-drives),</strong></li>
+<li><strong>any communication devices (e.g., mobile phones, radios of any sort, Bluetooth-enabled devices),</strong></li>
+<li><strong>watches of any type,</strong></li>
+<li><strong>any earphones, headphones, microphones and speakers.</strong></li>
+</ul>
+</blockquote>
+<p>最终，在交涉下，IC 与 ISC（科学委员会）共同做出了以下处理结果：</p>
+<ul>
+<li>X同学在第二试随身携带电源开启的具有通信功能的电子设备，严重违反了比赛规则。该选手被取消参赛资格。</li>
+<li>Y同学与Z同学在第二试身旁的背包中携带了具有通信功能的电子设备，违反了比赛规则。两名选手该试（Day2）的总成绩被减半。</li>
+</ul>
+<p>在 GA 大会（GA meeting，官方措辞如此）上，IC与ISC宣布了该处理决定，并征求 GA 大会的意见。现场存在零星的质疑声音（包括但不限于 “如何证明他们 day1 没带手机” 以及 “为什么是减半”），但最终该处理结果被各方接受。</p>
+<p><img lazyload="" alt="" data-src="https://cdn.luogu.com.cn/upload/image_hosting/a3n2dg05.png"></p>
+<p><em>图：GA 大会讨论内容实拍。图源 <a class="link" target="_blank" rel="noopener" href="https://codeforces.com/blog/entry/133606?#comment-1195002">IOI 2024 - Codeforces<i class="fas fa-external-link-alt"></i></a></em></p>
+<h3 id="处罚是否恰当"><a class="markdownIt-Anchor" href="#处罚是否恰当"></a> 处罚是否恰当</h3>
+<p>首先，我认为需要区分国际性竞赛和普通考试，才能较为客观地回答这个问题。</p>
+<p>为什么这么说？因为在普通的考试中，如高考，因为参考人数众多，且非国际性赛事，做出一个裁判或判罚可能不需要承担很大的舆论压力。因此，所有的判罚都可以直接按照规章制度上写明的方案去做。</p>
+<p>但是，在 IOI 中，由于参赛选手少（不到 400 个），参赛国家多，一个判罚可能需要经过反复的斟酌。并且，参赛选手不仅代表自己，更代表国家，判罚就更不能仅仅按照规则来，否则可能造成恶劣的国际影响。事实上，如果你仔细阅读过规则，你会发现整个规则中并没有写明对于参赛者违规的处罚方案，即使在专门的作弊（Cheating）章节中，也只提到<strong>可能</strong>会取消参赛资格（Violating any of the following rules is considered cheating, and may result in disqualification）。以上几种原因，决定了判罚只能由 IC 和 ISC 进行讨论和表决后公布。</p>
+<p>那么处理问题的过程是否合理呢？或者说 IC 和 ISC 的人员是否有主观因素？</p>
+<p>根据 Qingyu 的描述，在 IC 和 ISC 组织会议研讨的时候，没有公开当事人的国籍。但是依然不排除 IC 和 ISC 的工作人员知道此事的可能，因此主观因素不可避免。</p>
+<p>同时 GA 大会的照片内容（见上）显示，在进行 GA 表决时，没有公开国籍和当事人姓名，仅用 XYZ 来代替姓名。因此在排除与会者提前知道当事人国籍的情况下，处理选手问题的过程是完全合理合规的。</p>
+<p>如果你要问我 IC 和 ISC 的人要是知道了怎么办，我也没法说，因为我也不知道。</p>
+<p>再来讨论一下处罚结果的合理性。</p>
+<p>我个人认为本次处理结果较轻，如果是我做出判决的话，我会判 3 个 dq（disqualification，失格，可以理解为取消参赛资格） 外加取消中国队集体成绩资格。</p>
+<p>当然这仅仅是本人的看法，如有其它意见可以友善讨论。</p>
+<p>携带通讯设备进入考室（competition rooms）本就是违规行为，并且其实 Contest Rules 中有明确规定。</p>
+<blockquote>
+<p>Contest Rules 中 Supplies 章节的内容：</p>
+<p><strong>In the competition room, blank paper, writing tools, Clarification Request Forms, snacks and water will be provided. On the competition days, contestants may not bring anything into the competition rooms, except for the following items under the proviso that they cannot transmit or store any data in electronic or printed or other written format (other than the purpose for which they have been designed):</strong></p>
+<ul>
+<li><strong>clothing,</strong></li>
+<li><strong>reasonable jewelry,</strong></li>
+<li><strong>ID badge (provided by the IOI organizing committee),</strong></li>
+<li><strong>writing utensils,</strong></li>
+<li><strong>USB keyboards and mice (with no wireless communication and no programmable functions whose configuration is retained when unplugged),</strong></li>
+<li><strong>mouse pads,</strong></li>
+<li><strong>small mascots,</strong></li>
+<li><strong>English dictionaries,</strong></li>
+<li><strong>snacks,</strong></li>
+<li><strong>medicine and medical equipment,</strong></li>
+<li><strong>earplugs and earmuffs.</strong></li>
+</ul>
+<p><strong>Bringing items with the exception of clothing, jewelry, and ID badge into the competition room requires prior approval from the Technical Committee. A contestant must submit these items by leaving them in a designated container provided by the technical committee on their workstation during the Practice Competition.</strong></p>
+<p><strong>As soon as the practice competition is over, the technical committee will check the submitted items. If there are rejected items, the delegation leader of the contestant will be notified and they are allowed to resubmit replacements. The approved items will be kept by the technical committee and given to the contestants at the start of each competition day. However, during the contest, the technical committee may decide to remove any of these approved items if they deem that the item’s usage is disruptive to other contestants during the contest.</strong></p>
+<p><strong>After the first competition day is over, a contestant must leave the submitted items in the same designated container provided by the technical committee on their workstation if they want to continue using these items on the second competition day. Contestants are allowed to submit new items or replacements during the time of analysis for the first competition day, to use them on the second competition day.</strong></p>
+<p><strong>At the end of the practice contest and the first competition day, any unsubmitted items left on the contestants’ workstation will be cleared and not returned to the contestants. Hence, contestants should take all items with them at the end of the practice contest and each competition day.</strong></p>
+<p><strong>At the end of the second competition day, contestants should take all the submitted items with them.</strong></p>
+<p><strong>Any attempts to bring any other items unlisted above into the competition rooms are considered cheating. In particular, the following items are strictly prohibited on the competitions:</strong></p>
+<ul>
+<li><strong>any computing equipment (e.g. calculators, laptops, tablets),</strong></li>
+<li><strong>any keyboards or mice, with wireless communication or programmable functions whose configuration is retained when unplugged,</strong></li>
+<li><strong>any books, manuals, written or printed materials,</strong></li>
+<li><strong>any data storage medium (e.g., CD-ROMs, USB drives, flash cards, micro-drives),</strong></li>
+<li><strong>any communication devices (e.g., mobile phones, radios of any sort, Bluetooth-enabled devices),</strong></li>
+<li><strong>watches of any type,</strong></li>
+<li><strong>any earphones, headphones, microphones and speakers.</strong></li>
+</ul>
+<p><strong>Regarding snacks, note that host organizing committee will provide all contestants with some amount of snacks. In cases when a contestant would still like to bring in snacks, they should make sure that the snacks are not noisy or smelly, and are not disturbing for other contestants in any other way. In case of complaints from other contestants during the contest, the snack might be removed.</strong></p>
+<p><strong>Any electronic or printed materials provided by the organizers during a competition round may be used by the contestants (e.g., a Users Guide to the Contest System, or any electronic documentation or reference manuals provided in the installed contest environment or on the provided grading system).</strong></p>
+</blockquote>
+<p>Contest Rules 中严格规定了能带入考场与无法带入的东西的种类，注意到通信设备属于“严禁携带物品”（strictly prohibited on the competitions），那么所有违反了的参赛者不论是否使用都应该被判做作弊（cheating），这个也在 Rules 中明确写了。</p>
+<h3 id="责任该谁承担"><a class="markdownIt-Anchor" href="#责任该谁承担"></a> 责任该谁承担</h3>
+<p>首先是参赛者。</p>
+<p>在上文引用的 Supplies 章节的内容中，所有的带入物品均需报备。而中国队每位参赛者都携带了包（bags）入场，理应均被判作弊，但是我觉得只处理 3 位参赛者是正确的，原因见后。</p>
+<p>其次是领队。</p>
+<p>在 Contest Rules 中最上方部分明确写出领队有义务确保所有队员都充分了解这些规则并遵守它们（Delegation Leaders have the responsibility to ensure that all members of their delegation fully understand these rules and abide by them），而领队显然没有做好这一工作。</p>
+<p>网络上存在的“领队前一天和选手隔离防止泄题”这种说法（领队在前一天要负责投票投出第二天测试选用题目和负责翻译题目），我觉得挺没道理的，这种东西应该提前跟队员讲好。</p>
+<p>然后是主办方。</p>
+<p>Supplies 章节规定了主办方要收集选手申请带入考场的物品清单并且审核，但是看这个样子大包小包都提进去了应该是主办方脑子出了点问题。</p>
+<p>另外这个地方难道没有金属探测仪吗？你说包里没测出来算了，你人手机放裤兜了你都没测出来？</p>
+<p>这三个主体都有锅。锅大锅小不好说，因为都挺大的，这要是出在国内高考，前前后后杀掉几百个都不好说。</p>
+<h2 id="教训"><a class="markdownIt-Anchor" href="#教训"></a> 教训</h2>
+<p>尊重每一条规则，因为一定有它存在的道理。</p>
+<p><s>大型考试前多玩手机因为 zak 手机没电了放在酒店充电然后逃过一劫最后获得满分 rank 1（逃</s></p>
+
+                    
+                </div>
+
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                IOI 2024
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                2024/09/06/ioi-2024/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">Halberd Cease</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2024-09-06 15:13</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/09/06/my-sexual-orientation/"
+                                   title="LGBT 大环境背景下，我的性别取向如何？"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">LGBT 大环境背景下，我的性别取向如何？</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/08/21/gls-segtree/"
+                                   title="吉老师线段树笔记"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">吉老师线段树笔记</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%9B%BD%E9%98%9F%E7%9A%84%E8%A1%A8%E7%8E%B0"><span class="nav-text"> 中国队的表现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%BA%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA%E8%A2%AB%E5%88%A4%E5%A4%B1%E6%A0%BC"><span class="nav-text"> 携智能手机被判失格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E6%83%85%E7%BB%8F%E8%BF%87"><span class="nav-text"> 事情经过</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%BD%9A%E6%98%AF%E5%90%A6%E6%81%B0%E5%BD%93"><span class="nav-text"> 处罚是否恰当</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A3%E4%BB%BB%E8%AF%A5%E8%B0%81%E6%89%BF%E6%8B%85"><span class="nav-text"> 责任该谁承担</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%99%E8%AE%AD"><span class="nav-text"> 教训</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+        &copy;&nbsp;<span>2023</span>&nbsp;-&nbsp;2024
+        
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Halberd Cease</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+        <div class="count-info info-item">
+            
+
+            
+                <span class="count-item border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-item border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%9B%BD%E9%98%9F%E7%9A%84%E8%A1%A8%E7%8E%B0"><span class="nav-text"> 中国队的表现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%BA%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA%E8%A2%AB%E5%88%A4%E5%A4%B1%E6%A0%BC"><span class="nav-text"> 携智能手机被判失格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E6%83%85%E7%BB%8F%E8%BF%87"><span class="nav-text"> 事情经过</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%BD%9A%E6%98%AF%E5%90%A6%E6%81%B0%E5%BD%93"><span class="nav-text"> 处罚是否恰当</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A3%E4%BB%BB%E8%AF%A5%E8%B0%81%E6%89%BF%E6%8B%85"><span class="nav-text"> 责任该谁承担</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%99%E8%AE%AD"><span class="nav-text"> 教训</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/lazyload.min.js"></script>
+
+
+<div class="pjax">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/post/copyright-info.min.js"></script>
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.0/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

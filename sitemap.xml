@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://halberdcease.acgnsoft.com/2024/10/20/cosplay-2024/</loc>
+    
+    <lastmod>2024-10-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://halberdcease.acgnsoft.com/2024/09/17/check-list/</loc>
+    
+    <lastmod>2024-09-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://halberdcease.acgnsoft.com/2024/09/06/my-sexual-orientation/</loc>
     
     <lastmod>2024-09-08</lastmod>
@@ -121,7 +139,7 @@
 
   <url>
     <loc>http://halberdcease.acgnsoft.com/</loc>
-    <lastmod>2024-09-08</lastmod>
+    <lastmod>2024-10-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -131,42 +149,49 @@
   
   <url>
     <loc>http://halberdcease.acgnsoft.com/categories/%E6%AF%94%E8%B5%9B%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2024-09-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://halberdcease.acgnsoft.com/categories/%E6%9D%82%E5%8F%B2%E9%80%89%E5%90%83/</loc>
-    <lastmod>2024-09-08</lastmod>
+    <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://halberdcease.acgnsoft.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2024-09-08</lastmod>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://halberdcease.acgnsoft.com/categories/%E6%90%9E%E5%B1%81/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://halberdcease.acgnsoft.com/categories/%E6%9D%82%E5%8F%B2%E9%80%89%E5%90%83/</loc>
+    <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://halberdcease.acgnsoft.com/categories/%E9%97%B2%E8%AF%9D/</loc>
-    <lastmod>2024-09-08</lastmod>
+    <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://halberdcease.acgnsoft.com/categories/%E9%B2%9C%E8%8A%B1/</loc>
-    <lastmod>2024-09-08</lastmod>
+    <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://halberdcease.acgnsoft.com/categories/%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2024-09-08</lastmod>
+    <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
